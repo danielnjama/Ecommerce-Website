@@ -1,0 +1,6 @@
+>dublicate title tags
+>dublicate content ie http and https
+>dublicate meta content
+> ##convert all HTTP pages to HTTPS
+>add the lang tag to the home page html (<html lang="en">)
+>>add title tags to all paeges

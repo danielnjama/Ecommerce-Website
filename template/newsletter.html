@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+
+{% block title %}
+<title>Newsletter | Dynamic TechNologies</title>
+<meta name="robots" content="noindex, nofollow">
+{% endblock title %}
+<!-- //Modal2 -->
+<!-- /banner_bottom_agile_info -->
+
+{% block content %}
+
+</div>
+   <div class="banner_bottom_agile_info">
+	<div class="container">
+	   <div class="agile-contact-grids">
+				<div class="agile-contact-left">
+
+
+					<div class="col-md-6 address-grid">
+						<h4>Newsletter <span>subscribers</span></h4>
+						
+							<div class="mail-agileits-w3layouts">
+								
+								<div class="contact-right">
+								{% if subscribers %}
+								{% for sub in subscribers %}
+								
+								<p>{{forloop.counter}}.{{sub.email}}</p>
+								{% endfor %}
+								{% else %}
+							<p>No subscribers at the moment </p>
+								{% endif %}
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+													
+					</div>
+
+					
+					<div class="col-md-6 contact-form">
+						<h4 class="white-w3ls">Send <span>Newsletter</span></h4>
+						<form action="#" method="post">
+						{% csrf_token %}
+							
+							<div class="styled-input">
+								<input type="text" name="subject" required="">
+								<label>Subject</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<textarea name="message" required=""></textarea>
+								<label>Message</label>
+								<span></span>
+							</div>	 
+							<input type="submit" value="SEND">
+						</form>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+       </div>
+	</div>
+ <!--//contact-->
+<!--/grids-->
+<!--grids-->
+{% endblock content %}
+<!-- footer -->
